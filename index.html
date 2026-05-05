@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -266,62 +266,62 @@
 <div class="wrapper">
 
   <header>
-    <p class="eyebrow">Израиль · Закон о защите потребителей</p>
-    <h1>Калькулятор<br>возврата <span>билетов</span></h1>
+    <p class="eyebrow">Israel · Consumer Protection Law</p>
+    <h1>Ticket Refund<br><span>Calculator</span></h1>
   </header>
 
   <div class="card">
     <div class="fields">
       <div class="field">
-        <label>Дата покупки</label>
+        <label>Purchase Date</label>
         <div class="date-input-wrap">
-          <input type="number" id="p-day" class="day-input" placeholder="ДД" min="1" max="31">
+          <input type="number" id="p-day" class="day-input" placeholder="DD" min="1" max="31">
           <select id="p-month" class="month-select">
-            <option value="" disabled selected>Месяц</option>
-            <option value="0">Январь</option>
-            <option value="1">Февраль</option>
-            <option value="2">Март</option>
-            <option value="3">Апрель</option>
-            <option value="4">Май</option>
-            <option value="5">Июнь</option>
-            <option value="6">Июль</option>
-            <option value="7">Август</option>
-            <option value="8">Сентябрь</option>
-            <option value="9">Октябрь</option>
-            <option value="10">Ноябрь</option>
-            <option value="11">Декабрь</option>
+            <option value="" disabled selected>Month</option>
+            <option value="0">January</option>
+            <option value="1">February</option>
+            <option value="2">March</option>
+            <option value="3">April</option>
+            <option value="4">May</option>
+            <option value="5">June</option>
+            <option value="6">July</option>
+            <option value="7">August</option>
+            <option value="8">September</option>
+            <option value="9">October</option>
+            <option value="10">November</option>
+            <option value="11">December</option>
           </select>
-          <input type="number" id="p-year" class="year-input" placeholder="ГГГГ" min="2020" max="2030">
+          <input type="number" id="p-year" class="year-input" placeholder="YYYY" min="2020" max="2030">
         </div>
       </div>
 
       <div class="field">
-        <label>Дата ивента</label>
+        <label>Event Date</label>
         <div class="date-input-wrap">
-          <input type="number" id="e-day" class="day-input" placeholder="ДД" min="1" max="31">
+          <input type="number" id="e-day" class="day-input" placeholder="DD" min="1" max="31">
           <select id="e-month" class="month-select">
-            <option value="" disabled selected>Месяц</option>
-            <option value="0">Январь</option>
-            <option value="1">Февраль</option>
-            <option value="2">Март</option>
-            <option value="3">Апрель</option>
-            <option value="4">Май</option>
-            <option value="5">Июнь</option>
-            <option value="6">Июль</option>
-            <option value="7">Август</option>
-            <option value="8">Сентябрь</option>
-            <option value="9">Октябрь</option>
-            <option value="10">Ноябрь</option>
-            <option value="11">Декабрь</option>
+            <option value="" disabled selected>Month</option>
+            <option value="0">January</option>
+            <option value="1">February</option>
+            <option value="2">March</option>
+            <option value="3">April</option>
+            <option value="4">May</option>
+            <option value="5">June</option>
+            <option value="6">July</option>
+            <option value="7">August</option>
+            <option value="8">September</option>
+            <option value="9">October</option>
+            <option value="10">November</option>
+            <option value="11">December</option>
           </select>
-          <input type="number" id="e-year" class="year-input" placeholder="ГГГГ" min="2020" max="2030">
+          <input type="number" id="e-year" class="year-input" placeholder="YYYY" min="2020" max="2030">
         </div>
       </div>
     </div>
 
     <div class="price-row">
-      <label>Стоимость билета (₪)</label>
-      <input type="number" id="price" placeholder="напр. 200" min="0">
+      <label>Ticket Price (₪)</label>
+      <input type="number" id="price" placeholder="e.g. 200" min="0">
     </div>
   </div>
 
@@ -330,33 +330,33 @@
     <div class="result-sub" id="result-sub"></div>
     <div class="metrics" id="metrics" style="display:none">
       <div class="metric">
-        <div class="metric-label">Дней с покупки</div>
+        <div class="metric-label">Days since purchase</div>
         <div class="metric-value" id="days-since">—</div>
       </div>
       <div class="metric">
-        <div class="metric-label">До ивента (нераб.)</div>
+        <div class="metric-label">Non-rest days to event</div>
         <div class="metric-value" id="non-rest">—</div>
       </div>
       <div class="metric">
-        <div class="metric-label">Сегодня</div>
+        <div class="metric-label">Today</div>
         <div class="metric-value" id="today-val">—</div>
       </div>
     </div>
     <div class="price-summary" id="price-summary" style="display:none">
       <div class="price-item">
-        <div class="price-item-label">Удержание</div>
+        <div class="price-item-label">Fee withheld</div>
         <div class="price-item-value" id="fee-val">—</div>
       </div>
       <div class="price-item">
-        <div class="price-item-label">К возврату</div>
+        <div class="price-item-label">Refund amount</div>
         <div class="price-item-value green" id="refund-val">—</div>
       </div>
     </div>
   </div>
 
   <footer>
-    По закону о защите потребителей Израиля (תקנות הגנת הצרכן, ביטול עסקה 2010).<br>
-    Суббота и праздники не считаются рабочими днями. Пятница — рабочий день.
+    Based on Israeli Consumer Protection Law (תקנות הגנת הצרכן, ביטול עסקה 2010).<br>
+    Saturday and holidays are not counted as working days. Friday is a working day.
   </footer>
 
 </div>
@@ -398,7 +398,7 @@
     const priceSummary = document.getElementById('price-summary');
 
     const todayEl = document.getElementById('today-val');
-    todayEl.textContent = today.toLocaleDateString('ru-RU', {day:'numeric',month:'short'});
+    todayEl.textContent = today.toLocaleDateString('en-GB', {day:'numeric',month:'short'});
 
     if (!purchase || !event) {
       result.style.display = 'none';
@@ -406,14 +406,14 @@
     }
 
     if (event <= today) {
-      show('bad', 'Ивент уже прошёл', 'Возврат невозможен');
+      show('bad', 'Event already passed', 'Refund is not possible');
       metrics.style.display = 'none';
       priceSummary.style.display = 'none';
       return;
     }
 
     if (purchase > today) {
-      show('neutral', 'Дата покупки в будущем', 'Проверьте введённые данные');
+      show('neutral', 'Purchase date is in the future', 'Please check the dates entered');
       metrics.style.display = 'none';
       priceSummary.style.display = 'none';
       return;
@@ -432,20 +432,20 @@
 
     if (ok14 && ok7) {
       cls = 'ok';
-      title = 'Возврат по закону: удержание 5% или ₪100';
-      sub = 'Менее 14 дней с покупки · До ивента 7+ нерабочих дней';
+      title = 'Refund by law: fee of 5% or ₪100 (whichever is lower)';
+      sub = 'Less than 14 days since purchase · 7+ non-rest days until the event';
     } else if (!ok14 && ok7) {
       cls = 'warn';
-      title = 'Только добровольный возврат';
-      sub = 'С покупки прошло 14+ дней. Закон не обязывает — условия на усмотрение организатора';
+      title = 'Voluntary refund only';
+      sub = '14+ days have passed since purchase. The law does not require a refund — terms are at the organizer\'s discretion';
     } else if (ok14 && !ok7) {
       cls = 'bad';
-      title = 'Нет возврата по закону';
-      sub = 'До ивента меньше 7 нерабочих дней — возврат не предусмотрен, даже в рамках 14 дней';
+      title = 'No refund under the law';
+      sub = 'Fewer than 7 non-rest days until the event — refund is not required, even within 14 days of purchase';
     } else {
       cls = 'bad';
-      title = 'Нет возврата по закону';
-      sub = 'Прошло 14+ дней с покупки и до ивента менее 7 нерабочих дней';
+      title = 'No refund under the law';
+      sub = '14+ days since purchase and fewer than 7 non-rest days until the event';
     }
 
     show(cls, title, sub);
@@ -458,7 +458,7 @@
       document.getElementById('refund-val').textContent = '₪' + refund.toFixed(0);
       priceSummary.style.display = '';
     } else if (price > 0 && !ok14 && ok7) {
-      document.getElementById('fee-val').textContent = 'на усмотрение';
+      document.getElementById('fee-val').textContent = 'at discretion';
       document.getElementById('refund-val').textContent = '—';
       priceSummary.style.display = '';
     } else {
