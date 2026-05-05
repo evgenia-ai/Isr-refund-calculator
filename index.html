@@ -454,8 +454,8 @@
     if (price > 0 && ok14 && ok7) {
       const fee = Math.min(price * 0.05, 100);
       const refund = price - fee;
-      document.getElementById('fee-val').textContent = '₪' + fee.toFixed(0);
-      document.getElementById('refund-val').textContent = '₪' + refund.toFixed(0);
+      document.getElementById('fee-val').textContent = '₪' + fee.toFixed(2);
+      document.getElementById('refund-val').textContent = '₪' + refund.toFixed(2);
       priceSummary.style.display = '';
     } else if (price > 0 && !ok14 && ok7) {
       document.getElementById('fee-val').textContent = 'at discretion';
